@@ -7,7 +7,9 @@ let buttonsNav = document.querySelectorAll(".nav-ancor"),
   buttonTop = document.querySelector(".button-up a"),
   buttonTestDistance = document.querySelector("#test");
 
+// when user scroll in WebSite
 window.addEventListener("scroll", (e) => {
+  // check if user scroll at 250 or up show btn travel up
   setInterval(
     document.querySelector("html").scrollTop >= 250
       ? buttonTop.classList.add("active")
@@ -15,6 +17,7 @@ window.addEventListener("scroll", (e) => {
     1
   );
 
+  // if user scroll at (number in if condition) start animation
   setInterval((e) => {
     let arrTitles = document.querySelectorAll(".title h2");
     if (document.querySelector("html").scrollTop >= 780) {
@@ -55,6 +58,7 @@ window.addEventListener("scroll", (e) => {
   }, 2500);
 });
 
+// btn nav bar if user hover add class active if user leave hover remove class
 for (let btn of buttonsNav) {
   btn.addEventListener("mouseenter", () => {
     btn.querySelector("span").classList.add("active");
@@ -65,17 +69,17 @@ for (let btn of buttonsNav) {
   });
 }
 
+// if hover on PortfolioBtn show drop menu
 function navBtnPortfolioHover() {
   buttonsNav[5].querySelector("span").classList.add("active");
   dropMenuPortfolio.classList.add("show");
 }
 
+// if hover on PortfolioBtn hidden drop menu
 function navBtnPortfolioLeave() {
   buttonsNav[5].querySelector("span").classList.remove("active");
   dropMenuPortfolio.classList.remove("show");
 }
-
-function activeContact() {}
 
 buttonsNav[5].addEventListener("mouseenter", navBtnPortfolioHover);
 buttonsNav[5].addEventListener("mouseleave", navBtnPortfolioLeave);
@@ -83,7 +87,7 @@ buttonsNav[5].addEventListener("mouseleave", navBtnPortfolioLeave);
 dropMenuPortfolio.addEventListener("mouseenter", navBtnPortfolioHover);
 dropMenuPortfolio.addEventListener("mouseleave", navBtnPortfolioLeave);
 
-//
+//btn contact Us if user click btn his show Every Social Btns
 plusIcon.addEventListener("click", () => {
   if (plusIcon.classList.contains("show")) {
     plusIcon.classList.remove("show");
