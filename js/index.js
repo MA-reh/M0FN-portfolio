@@ -5,7 +5,8 @@ let buttonsNav = document.querySelectorAll(".nav-ancor"),
   BoxIconsSocials = plusIcon.nextElementSibling,
   allIconsSocial = BoxIconsSocials.querySelectorAll("span.social-bg"),
   buttonTop = document.querySelector(".button-up a"),
-  buttonTestDistance = document.querySelector("#test");
+  buttonTestDistance = document.querySelector("#test"),
+  allSectionsInPage = document.querySelectorAll(".click-key");
 
 // when user scroll in WebSite
 window.addEventListener("scroll", (e) => {
@@ -20,42 +21,42 @@ window.addEventListener("scroll", (e) => {
   // if user scroll at (number in if condition) start animation
   setInterval((e) => {
     let arrTitles = document.querySelectorAll(".title h2");
-    if (document.querySelector("html").scrollTop >= 780) {
+    if (document.querySelector("html").scrollTop >= 810) {
       arrTitles[0].classList.add("active");
     } else {
       arrTitles[0].classList.remove("active");
     }
 
-    if (document.querySelector("html").scrollTop >= 1865) {
+    if (document.querySelector("html").scrollTop >= 1900) {
       arrTitles[1].classList.add("active");
     } else {
       arrTitles[1].classList.remove("active");
     }
 
-    if (document.querySelector("html").scrollTop >= 2600) {
+    if (document.querySelector("html").scrollTop >= 2650) {
       arrTitles[2].classList.add("active");
     } else {
       arrTitles[2].classList.remove("active");
     }
 
-    if (document.querySelector("html").scrollTop >= 3350) {
+    if (document.querySelector("html").scrollTop >= 3400) {
       arrTitles[3].classList.add("active");
     } else {
       arrTitles[3].classList.remove("active");
     }
 
-    if (document.querySelector("html").scrollTop >= 4520) {
+    if (document.querySelector("html").scrollTop >= 4580) {
       arrTitles[4].classList.add("active");
     } else {
       arrTitles[4].classList.remove("active");
     }
 
-    if (document.querySelector("html").scrollTop >= 5690) {
+    if (document.querySelector("html").scrollTop >= 5730) {
       arrTitles[5].classList.add("active");
     } else {
       arrTitles[5].classList.remove("active");
     }
-  }, 2500);
+  }, 1000);
 });
 
 // btn nav bar if user hover add class active if user leave hover remove class
