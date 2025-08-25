@@ -13,8 +13,6 @@
 
     /* Button Top */
     .button-up a {
-        right: 10px;
-        bottom: -10px;
         width: 40px;
         height: 40px;
     }

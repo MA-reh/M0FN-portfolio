@@ -10,11 +10,11 @@
 
 @keyframes header-animation-img2 {
     0% {
-        transform: translateX(0px) rotate(40deg);
+        transform: translateX(0px) rotate(0deg);
     }
 
     100% {
-        transform: translateX(30px) rotate(40deg);
+        transform: translateX(30px) rotate(0deg);
     }
 }
 
@@ -30,11 +30,11 @@
 
 @keyframes header-animation-img4 {
     0% {
-        transform: translate(0px, 0px) rotate(40deg);
+        transform: translate(0px, 0px) rotate(0deg);
     }
 
     100% {
-        transform: translate(30px, -30px) rotate(40deg);
+        transform: translate(30px, -30px) rotate(0deg);
     }
 }
 

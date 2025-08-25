@@ -311,7 +311,7 @@ header#Home .space-img img:nth-of-type(2) {
     width: 125px;
     position: absolute;
     top: 10%;
-    right: 100px;
+    right: 150px;
     animation-name: header-animation-img2;
 }
 
@@ -327,7 +327,7 @@ header#Home .space-img img:nth-of-type(4) {
     width: 100px;
     position: absolute;
     bottom: 15%;
-    right: 100px;
+    right: 150px;
     animation-name: header-animation-img4;
 }
 
