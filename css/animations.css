@@ -55,37 +55,19 @@
         left: 50%;
     }
 
-    20% {
-        transform: translate(-50%, -25%) scale(1.4);
-        top: 50%;
-        left: 50%;
+    25% {
+        transform: translate(-50%, -25%) scale(1.25);
     }
 
-    40% {
-        transform: translate(-50%, -25%) scale(1);
-        top: 50%;
-        left: 40%;
-    }
-
-    60% {
-        transform: translate(-50%, -25%) scale(1.4);
-        top: 50%;
-        left: 50%;
-    }
-
-    70% {
+    50% {
         transform: translate(-50%, -25%) scale(1);
     }
 
-    80% {
-        transform: translate(-50%, -25%) scale(1.4);
-        top: 50%;
-        left: 60%;
+    75% {
+        transform: translate(-50%, -25%) scale(1.25);
     }
 
     100% {
         transform: translate(-50%, -25%) scale(1);
-        top: 50%;
-        left: 50%;
     }
 }
