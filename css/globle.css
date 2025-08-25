@@ -1,0 +1,144 @@
+:root {
+    --main-color: rgb(191, 247, 71);
+    --border-btn: #4eff63e4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+}
+
+/* Scroll حجم الشريط بتاع ال */
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+/* Scroll لون الخلفية بتاعت ال  */
+::-webkit-scrollbar-track {
+    background: #333;
+}
+
+/* Scroll بتحكم في لونه وشكله  */
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 10px;
+    box-shadow: inset 4px 2px 5px rgba(255, 248, 227, 0.312);
+}
+
+.font-1 {
+    font-family: 'Norwester', sans-serif;
+}
+
+.font-2 {
+    font-family: "League Spartan", sans-serif;
+}
+
+.font-3 {
+    font-family: "Roboto", sans-serif;
+}
+
+.font-4 {
+    font-family: "Big Shoulders", sans-serif;
+}
+
+.font-5 {
+    font-family: 'Magnolia Script', sans-serif;
+}
+
+section:nth-of-type(odd) {
+    background-color: #000;
+}
+
+section:nth-of-type(even) {
+    background-color: #171914;
+}
+
+.main-color {
+    color: #BFF747;
+}
+
+.main-btn {
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    color: #000;
+    position: relative;
+    border: 1px solid var(--border-btn);
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+
+.main-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.main-btn::before {
+    background-color: #fff;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition-duration: 0.5s;
+}
+
+.main-btn:hover::before {
+    left: 0;
+}
+
+.main-btn span {
+    position: relative;
+    transition-duration: .5s;
+}
+
+.main-btn span.icon-btn i {
+    transform: rotate(-45deg);
+    transition-duration: 00.5s;
+}
+
+.main-btn:hover span.icon-btn i {
+    transform: rotate(90deg);
+}
+
+.title {
+    position: relative;
+    z-index: 100;
+}
+
+.title .image {
+    position: relative;
+    background-image: url("../images/title-M0FN.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 295px;
+    height: 170px;
+    margin: 0 auto;
+}
+
+.title .image h2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    position: absolute;
+    width: 100%;
+    letter-spacing: 6px;
+    font-size: 30px;
+}
+
+.title .image h2.active {
+    animation-name: title-animation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}

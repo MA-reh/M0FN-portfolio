@@ -1,0 +1,1386 @@
+@media (max-width: 1300px) {
+
+    /* Globle */
+    .title .image {
+        width: 210px;
+        height: 130px;
+    }
+
+    .title .image h2 {
+        letter-spacing: 4px;
+        font-size: 24px;
+    }
+
+    /* Button Top */
+    .button-up a {
+        right: 10px;
+        bottom: -10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .button-up a.active {
+        bottom: 10px;
+    }
+
+    /* Nav */
+
+    nav.navbar {
+        height: 12vh;
+    }
+
+    nav.navbar .container a.navbar-brand img {
+        width: 50px;
+    }
+
+    nav.navbar .container .navbar-collapse {
+        position: relative;
+        margin-top: 30px;
+        background-color: #000;
+        height: 0px;
+        overflow: hidden;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid var(--main-color);
+        left: 0%;
+        transform: initial;
+    }
+
+    nav.navbar .container .navbar-collapse.show {
+        height: 100%;
+        max-width: 700px;
+    }
+
+    nav.navbar .container .navbar-collapse ul {
+        gap: 10px;
+        padding: 0px 0px;
+        margin-bottom: 10px;
+    }
+
+    nav.navbar .container .navbar-collapse a.main-btn {
+        font-size: 14px;
+        width: fit-content;
+        display: block;
+        margin: 0 auto 0px;
+    }
+
+    nav.navbar .container button {
+        display: flex;
+        width: 50px;
+        height: 40px;
+        padding: 2px 10px;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        border: 2px solid var(--main-color);
+        right: 15px;
+        top: 15px;
+        position: absolute;
+    }
+
+    nav.navbar .container button span {
+        width: 100%;
+        height: 3px;
+        display: block;
+        position: relative;
+        background-color: var(--main-color);
+    }
+
+    nav.navbar .container button span:nth-of-type(1) {
+        top: 0px;
+    }
+
+    nav.navbar .container button span:nth-of-type(2) {
+        transition-duration: .5s;
+        opacity: 1;
+    }
+
+    nav.navbar .container button span:nth-of-type(3) {
+        bottom: 0px;
+    }
+
+    nav.navbar .container .navbar-collapse.show+button {
+        border-color: transparent;
+        transition-duration: 0.3s;
+        transition-property: all;
+        position: absolute;
+    }
+
+    nav.navbar .container .navbar-collapse.show+button span:nth-of-type(1) {
+        transform: rotate(45deg) translateY(-50%);
+        top: 10px;
+        transition-duration: .7s;
+    }
+
+    nav.navbar .container .navbar-collapse.show+button span.remove {
+        opacity: 0;
+    }
+
+    nav.navbar .container .navbar-collapse.show+button span:nth-of-type(3) {
+        transform: rotate(-45deg) translateY(50%);
+        transition-duration: .7s;
+        bottom: 10px;
+    }
+
+    /* Header */
+
+    /* Space Images */
+    header#Home .space-img img:nth-of-type(1) {
+        width: 75px;
+        top: 20%;
+        left: 10px;
+    }
+
+    header#Home .space-img img:nth-of-type(2) {
+        width: 85px;
+        top: 10%;
+        right: 30px;
+    }
+
+    header#Home .space-img img:nth-of-type(3) {
+        width: 75px;
+        bottom: 7%;
+        left: 20px;
+    }
+
+    header#Home .space-img img:nth-of-type(4) {
+        width: 75px;
+        bottom: 10%;
+        right: 30px;
+    }
+
+    /* Container */
+
+    header#Home .container .content>img {
+        width: 75px;
+        margin-bottom: 30px;
+    }
+
+    header#Home .container span.M0FN {
+        padding: 3px 20px;
+        margin-bottom: 20px;
+    }
+
+    header#Home .container span.M0FN img {
+        width: 30px;
+    }
+
+    header#Home .container span.M0FN p {
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+
+    header#Home .container h2 {
+        font-size: 23px;
+        text-align: center;
+        letter-spacing: 1.5px;
+        width: 100%;
+    }
+
+    header#Home .container .buttons {
+        width: 100%;
+        height: 20%;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    header#Home .container .buttons .main-btn {
+        padding: 7px 30px;
+        font-size: 16px;
+    }
+
+    header#Home .container .buttons .social-buttons span {
+        margin-left: 0px;
+    }
+
+    header#Home .container .buttons .social-buttons ul .social-li .social-icon {
+        padding: 5px;
+    }
+
+    header#Home .container .buttons .social-buttons ul .social-li .social-icon i {
+        font-size: 14px;
+    }
+
+    /* main */
+
+    main .container>.row .spacial-card .item .body p {
+        font-size: 15px;
+    }
+
+    /* About */
+    #About .container .section:nth-of-type(2) .text {
+        width: 95%;
+        max-width: 350px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 5px 1px rgba(76, 76, 76, 0.716);
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h5 {
+        letter-spacing: 1px;
+        font-size: 22px;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h5::after {
+        width: 30%;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h3 {
+        font-size: 27px;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(2) p {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    /* Section 2 in About */
+
+    #About .container .section:nth-of-type(3) .items .spacial-card {
+        height: 250px;
+        max-width: 330px;
+        margin: 0 auto;
+        padding: 40px 50px;
+    }
+
+    #About .container .section:nth-of-type(3) .items .spacial-card h3 {
+        font-weight: 800;
+        font-size: 65px;
+    }
+
+    #About .container .section:nth-of-type(3) .items .spacial-card p {
+        margin: 0;
+        font-weight: 600;
+        color: #C1C1C1;
+        letter-spacing: 1.5px;
+        font-size: 28px;
+    }
+
+    #About .container .section:nth-of-type(3) .items .spacial-card span {
+        font-weight: 600;
+        color: #C1C1C1;
+        letter-spacing: 1.5px;
+        font-size: 28px;
+    }
+
+    /* Experience */
+
+    #Experience .container>.row .experience-row>.row .part:nth-of-type(2) h6 {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    #Experience .container>.row .experience-row>.row .part:nth-of-type(3) {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    /* Awards */
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h6 {
+        font-size: 16px;
+    }
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h6 img {
+        width: 40px;
+    }
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h2 {
+        font-size: 30px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item {
+        flex-wrap: nowrap;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item {
+        flex-wrap: wrap;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) .box:nth-of-type(2) h3 {
+        font-size: 22px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) .box:nth-of-type(2) h6 {
+        font-size: 18px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(2) {
+        justify-content: flex-start;
+    }
+
+    /* Service */
+    #Service .container>.text-service h2 {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    #Service .container>.row .spacial-card .item>.row .parts:nth-of-type(2) p {
+        font-size: 14px;
+    }
+
+    /* Portfolio */
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back p {
+        font-size: 12px !important;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back h5 {
+        font-size: 14px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back ul>.row .language {
+        padding: 5px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back ul>.row .language li {
+        font-size: 12px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back .btn-Portfolio {
+        padding: 5px 20px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    /* Contact */
+
+    #Contact .container {
+        background-image: none;
+    }
+
+    #Contact .container .content {
+        background-image: none;
+    }
+
+}
+
+@media (min-width: 371px) and (max-width: 1300px) {
+
+    /* Button Top */
+    .button-up a {
+        right: 20px;
+        bottom: -10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .button-up a.active {
+        bottom: 20px;
+    }
+
+    /* Header */
+
+    /* Space Images */
+    header#Home .space-img img:nth-of-type(1) {
+        width: 85px;
+        top: 20%;
+        left: 50px;
+    }
+
+    header#Home .space-img img:nth-of-type(2) {
+        width: 100px;
+        top: 10%;
+        right: 50px;
+    }
+
+    header#Home .space-img img:nth-of-type(3) {
+        width: 85px;
+        bottom: 7%;
+        left: 40px;
+    }
+
+    header#Home .space-img img:nth-of-type(4) {
+        width: 85px;
+        bottom: 10%;
+        right: 40px;
+    }
+
+    /* Container */
+    header#Home .container .content>img {
+        width: 75px;
+        margin-bottom: 30px;
+    }
+
+    header#Home .container span.M0FN {
+        padding: 3px 20px;
+        margin-bottom: 20px;
+    }
+
+    header#Home .container span.M0FN img {
+        width: 30px;
+    }
+
+    header#Home .container span.M0FN p {
+        font-size: 14px;
+    }
+
+    header#Home .container h2 {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    header#Home .container .buttons {
+        width: 100%;
+        height: 20%;
+        margin-top: 20px;
+    }
+
+    header#Home .container .buttons .main-btn {
+        padding: 10px 30px;
+        font-size: 18px;
+    }
+
+    header#Home .container .buttons .social-buttons ul .social-li .social-icon {
+        padding: 10px;
+    }
+
+    header#Home .container .buttons .social-buttons ul .social-li .social-icon i {
+        font-size: 16px;
+    }
+
+    /* main */
+
+    main .container>.row .spacial-card .item .body p {
+        font-size: 17px;
+    }
+
+    /* Experience */
+
+    #Experience .container>.row .experience-row>.row .part:nth-of-type(2) h6 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    /* Awards */
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h6 {
+        font-size: 18px;
+    }
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h6 img {
+        width: 40px;
+    }
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h2 {
+        font-size: 45px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item {
+        flex-wrap: nowrap;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) {
+        margin-bottom: 0px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) .box:nth-of-type(2) h3 {
+        font-size: 23px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) .box:nth-of-type(2) h6 {
+        font-size: 16px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(2) {
+        justify-content: flex-end;
+    }
+
+    /* Portfolio */
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back p {
+        font-size: 14px !important;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back h5 {
+        font-size: 16px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back ul>.row .language {
+        padding: 10px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back ul>.row .language li {
+        font-size: 14px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back .btn-Portfolio {
+        padding: 7px 25px;
+        font-size: 15px;
+    }
+
+
+
+}
+
+@media (min-width: 576px) and (max-width: 1300px) {
+
+    /* Globle */
+    .title .image {
+        width: 220px;
+        height: 140px;
+    }
+
+    .title .image h2 {
+        letter-spacing: 5px;
+        font-size: 24px;
+    }
+
+    /* Header */
+
+    /* Space Images */
+    header#Home .space-img img:nth-of-type(1) {
+        width: 85px;
+        top: 20%;
+        left: 50px;
+    }
+
+    header#Home .space-img img:nth-of-type(2) {
+        width: 100px;
+        top: 10%;
+        right: 50px;
+    }
+
+    header#Home .space-img img:nth-of-type(3) {
+        width: 85px;
+        bottom: 7%;
+        left: 40px;
+    }
+
+    header#Home .space-img img:nth-of-type(4) {
+        width: 85px;
+        bottom: 15%;
+        right: 40px;
+    }
+
+    /* Container */
+
+    header#Home .container .content>img {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+
+    header#Home .container span.M0FN {
+        padding: 5px 30px;
+        margin-bottom: 20px;
+    }
+
+    header#Home .container span.M0FN img {
+        width: 30px;
+    }
+
+    header#Home .container span.M0FN p {
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+
+    header#Home .container h2 {
+        font-size: 45px;
+        width: 100%;
+    }
+
+    header#Home .container .buttons {
+        width: 100%;
+        height: 10%;
+        margin-top: 20px;
+        flex-direction: row;
+    }
+
+    header#Home .container .buttons .main-btn {
+        padding: 7px 30px;
+        font-size: 16px;
+    }
+
+    header#Home .container .buttons .social-buttons span {
+        margin-left: 0px;
+    }
+
+    header#Home .container .buttons .social-buttons ul .social-li .social-icon {
+        padding: 10px;
+    }
+
+    header#Home .container .buttons .social-buttons ul .social-li .social-icon i {
+        font-size: 16px;
+    }
+
+    /* main */
+    main .container>.row .spacial-card .item .body h4 {
+        font-size: 28px;
+
+    }
+
+    main .container>.row .spacial-card .item .body p {
+        font-size: 17px;
+    }
+
+    /* About */
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h5 {
+        letter-spacing: 1px;
+        font-size: 23px;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h5::after {
+        width: 30%;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h3 {
+        font-size: 30px;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(2) p {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    /* Awards */
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) .box:nth-of-type(2) h3 {
+        font-size: 25px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) .box:nth-of-type(2) h6 {
+        font-size: 18px;
+    }
+
+    /* Service */
+    #Service .container>.text-service h2 {
+        font-size: 35px;
+        letter-spacing: 1px;
+    }
+
+    #Service .container>.row .spacial-card .item>.row .parts:nth-of-type(2) p {
+        font-size: 16px;
+    }
+
+    /* Portfolio */
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back p {
+        font-size: 16px !important;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back h5 {
+        font-size: 18px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back ul>.row .language li {
+        font-size: 16px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back .btn-Portfolio {
+        font-size: 16px;
+    }
+
+
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+
+    /* Globle */
+    .title .image {
+        width: 270px;
+        height: 150px;
+    }
+
+    .title .image h2 {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+
+    /* Header */
+
+    /* Space Images */
+    header#Home .space-img img:nth-of-type(1) {
+        width: 100px;
+        top: 20%;
+        left: 105px;
+    }
+
+    header#Home .space-img img:nth-of-type(2) {
+        width: 125px;
+        top: 10%;
+        right: 70px;
+    }
+
+    header#Home .space-img img:nth-of-type(3) {
+        width: 100px;
+        bottom: 7%;
+        left: 00px;
+    }
+
+    header#Home .space-img img:nth-of-type(4) {
+        width: 100px;
+        bottom: 15%;
+        right: 50px;
+    }
+
+    /* Container */
+
+    header#Home .container .content>img {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+
+    header#Home .container span.M0FN {
+        padding: 7px 40px;
+        margin-bottom: 20px;
+    }
+
+    header#Home .container span.M0FN img {
+        width: 30px;
+    }
+
+    header#Home .container span.M0FN p {
+        letter-spacing: 2px;
+        font-size: 16px;
+    }
+
+    header#Home .container h2 {
+        font-size: 45px;
+        width: 100%;
+    }
+
+    header#Home .container .buttons {
+        width: 75%;
+        height: 10%;
+        margin-top: 20px;
+        flex-direction: row;
+    }
+
+    header#Home .container .buttons .main-btn {
+        padding: 10px 30px;
+        font-size: 18px;
+    }
+
+    header#Home .container .buttons .social-buttons span {
+        margin-left: 0px;
+    }
+
+    header#Home .container .buttons .social-buttons ul .social-li .social-icon {
+        padding: 10px;
+    }
+
+    header#Home .container .buttons .social-buttons ul .social-li .social-icon i {
+        font-size: 16px;
+    }
+
+    /* Experience */
+
+    #Experience .container>.row .experience-row>.row .part:nth-of-type(2) h6 {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    #Experience .container>.row .experience-row>.row .part:nth-of-type(3) {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    #Experience .container>.row .experience-row>.row .part:nth-of-type(3) span {
+        font-size: 13px;
+    }
+
+    /* Awards */
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h6 {
+        font-size: 16px;
+    }
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h6 img {
+        width: 40px;
+    }
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h2 {
+        font-size: 35px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item {
+        flex-wrap: wrap;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) .box:nth-of-type(2) h3 {
+        font-size: 22px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) .box:nth-of-type(2) h6 {
+        font-size: 16px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(2) {
+        justify-content: flex-start;
+    }
+
+    /* Service */
+    #Service .container>.text-service h2 {
+        font-size: 40px;
+        letter-spacing: 1px;
+    }
+
+    #Service .container>.row .spacial-card .item>.row .parts:nth-of-type(2) p {
+        font-size: 16px;
+        width: 75%;
+    }
+
+    /* Portfolio */
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back h3 {
+        font-size: 35px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back p {
+        font-size: 17px !important;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back h5 {
+        font-size: 24px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back ul>.row .language li {
+        font-size: 16px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back .btn-Portfolio {
+        font-size: 16px;
+    }
+
+    /* Contact Us */
+
+    #Contact .container {
+        background-image: url("../images/ManContact.svg");
+        background-position: 90% 270px;
+        background-size: 20%;
+    }
+
+    #Contact .container .content {
+        background-image: url("../images/ManContact2.svg");
+        background-position: 10% 270px;
+        background-size: 20%;
+    }
+
+    #Contact .container .item {
+        width: 350px;
+        height: 350px;
+    }
+
+    #Contact .container .item span.socials-buttons,
+    #Contact .container .item .box-socials .social-bg .social-btn {
+        width: 55px;
+        height: 55px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+
+    /* Globle */
+    .title .image {
+        width: 270px;
+        height: 150px;
+    }
+
+    .title .image h2 {
+        letter-spacing: 5px;
+    }
+
+    /* Button Top */
+    .button-up a {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    /* Nav */
+
+    nav.navbar {
+        z-index: 10000;
+        position: fixed;
+        height: 15vh;
+        width: 100%;
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid var(--main-color);
+    }
+
+    nav.navbar .container {
+        position: relative;
+    }
+
+    nav.navbar .container a.navbar-brand img {
+        width: 65px;
+    }
+
+    nav.navbar .container .navbar-collapse {
+        position: absolute;
+        margin-top: 0px;
+        background-color: transparent;
+        height: 100%;
+        overflow: initial;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    nav.navbar .container .navbar-collapse ul {
+        margin-bottom: 0;
+        background-color: #000;
+        padding: 10px 25px;
+        border-radius: 50px;
+    }
+
+    nav.navbar .container .navbar-collapse ul li .nav-ancor {
+        padding: 5px;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+
+    nav.navbar .container .navbar-collapse ul li .nav-ancor span {
+        padding-top: 4px;
+    }
+
+    nav.navbar .container button {
+        display: none;
+    }
+
+    /* Drop Menu */
+
+    nav.navbar .container .navbar-collapse>ul li .drop-div ul.dropDown li.item-drop .btn-dropDown span {
+        font-size: 14px;
+    }
+
+
+    /* Header */
+
+    /* Space Images */
+    header#Home .space-img img:nth-of-type(1) {
+        width: 100px;
+        top: 20%;
+        left: 125px;
+    }
+
+    header#Home .space-img img:nth-of-type(2) {
+        width: 125px;
+        top: 10%;
+        right: 100px;
+    }
+
+    header#Home .space-img img:nth-of-type(3) {
+        width: 100px;
+        bottom: 7%;
+        left: 75px;
+    }
+
+    header#Home .space-img img:nth-of-type(4) {
+        width: 100px;
+        bottom: 15%;
+        right: 100px;
+    }
+
+    /* Container */
+
+    header#Home .container .content>img {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+
+    header#Home .container span.M0FN {
+        padding: 7px 40px;
+        margin-bottom: 20px;
+    }
+
+    header#Home .container span.M0FN img {
+        width: 30px;
+    }
+
+    header#Home .container span.M0FN p {
+        letter-spacing: 2px;
+        font-size: 16px;
+    }
+
+    header#Home .container h2 {
+        font-size: 65px;
+        width: 100%;
+    }
+
+    header#Home .container .buttons {
+        width: 55%;
+        height: 10%;
+        margin-top: 20px;
+        flex-direction: row;
+    }
+
+    header#Home .container .buttons .main-btn {
+        padding: 10px 30px;
+        font-size: 18px;
+    }
+
+    header#Home .container .buttons .social-buttons span {
+        margin-left: 0px;
+    }
+
+    header#Home .container .buttons .social-buttons ul .social-li .social-icon {
+        padding: 10px;
+    }
+
+    header#Home .container .buttons .social-buttons ul .social-li .social-icon i {
+        font-size: 16px;
+    }
+
+    /* main */
+    main .container>.row .spacial-card .item .body h4 {
+        font-size: 22px;
+    }
+
+    main .container>.row .spacial-card .item .body p {
+        font-size: 15px;
+    }
+
+    /* About */
+    #About .container .section:nth-of-type(2) .text {
+        width: 95%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h3 {
+        font-size: 40px;
+    }
+
+
+    /* Section 2 in About */
+
+    #About .container .section:nth-of-type(3) .items .spacial-card {
+        height: 250px;
+        max-width: 330px;
+        margin: 0 auto;
+        padding: 40px 50px;
+    }
+
+    #About .container .section:nth-of-type(3) .items .spacial-card h3 {
+        font-weight: 800;
+        font-size: 65px;
+    }
+
+    #About .container .section:nth-of-type(3) .items .spacial-card p {
+        font-size: 22px;
+    }
+
+    #About .container .section:nth-of-type(3) .items .spacial-card span {
+        font-size: 22px;
+    }
+
+    /* Experience */
+
+    #Experience .container>.row .experience-row>.row .part:nth-of-type(2) h6 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    #Experience .container>.row .experience-row>.row .part:nth-of-type(3) span {
+        font-size: 16px;
+    }
+
+    /* Awards */
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h6 {
+        font-size: 18px;
+    }
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h6 img {
+        width: 45px;
+    }
+
+    #Awards .container .row .spacial-card:nth-of-type(1) .item h2 {
+        font-size: 50px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item {
+        flex-wrap: nowrap;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) {
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) .box:nth-of-type(2) h3 {
+        font-size: 25px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(1) .box:nth-of-type(2) h6 {
+        font-size: 18px;
+    }
+
+    #Awards .container .row .spacial-card:not(:first-child) .item .part:nth-of-type(2) {
+        align-items: end;
+        justify-content: flex-end;
+    }
+
+    /* Service */
+    #Service .container>.text-service h2 {
+        font-size: 55px;
+        letter-spacing: 2px;
+    }
+
+    #Service .container>.row .spacial-card .item>.row .parts:nth-of-type(2) p {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    /* Portfolio */
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back h3 {
+        font-size: 30px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back p {
+        font-size: 14px !important;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back h5 {
+        font-size: 20px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back ul>.row .language li {
+        font-size: 16px;
+    }
+
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back .btn-Portfolio {
+        font-size: 16px;
+    }
+
+    /* Contact Us */
+
+    #Contact .container {
+        background-image: url("../images/ManContact.svg");
+        background-position: 85% 300px;
+        background-size: 20%;
+    }
+
+    #Contact .container .content {
+        background-image: url("../images/ManContact2.svg");
+        background-position: 10% 300px;
+        background-size: 20%;
+    }
+
+    #Contact .container {
+        background-image: url("../images/ManContact.svg");
+        background-position: 85% 200px;
+        background-size: 20%;
+    }
+
+    #Contact .container .content {
+        background-image: url("../images/ManContact2.svg");
+        background-position: 15% 200px;
+        background-size: 20%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+
+    /* Globle */
+    .title .image {
+        width: 270px;
+        height: 150px;
+    }
+
+    .title .image h2 {
+        letter-spacing: 5px;
+    }
+
+
+    /* Drop Menu */
+
+    nav.navbar .container .navbar-collapse>ul li .drop-div ul.dropDown li.item-drop .btn-dropDown span {
+        font-size: 15px;
+    }
+
+    /* Header */
+
+    /* Container */
+
+    header#Home .container .content>img {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+
+    header#Home .container span.M0FN {
+        padding: 7px 40px;
+        margin-bottom: 20px;
+    }
+
+    header#Home .container span.M0FN img {
+        width: 30px;
+    }
+
+    header#Home .container span.M0FN p {
+        letter-spacing: 2px;
+        font-size: 16px;
+    }
+
+    header#Home .container h2 {
+        font-size: 75px;
+        width: 100%;
+    }
+
+    header#Home .container .buttons {
+        width: 50%;
+        height: 10%;
+        margin-top: 20px;
+        flex-direction: row;
+    }
+
+    /* About */
+
+    #About .container .section:nth-of-type(2) .text {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h5 {
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h5::after {
+        width: 30%;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h3 {
+        font-size: 45px;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(2) p {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+    /* Section 2 in About */
+
+    #About .container .section:nth-of-type(3) .items .spacial-card {
+        height: 250px;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    #About .container .section:nth-of-type(3) .items .spacial-card h3 {
+        font-weight: 800;
+        font-size: 65px;
+    }
+
+    #About .container .section:nth-of-type(3) .items .spacial-card p {
+        font-size: 22px !important;
+    }
+
+    #About .container .section:nth-of-type(3) .items .spacial-card span {
+        font-size: 22px;
+    }
+
+    /* Portfolio */
+    #Portfolio .container .projects>.row.Web-Developer .spacial-card .item .back p {
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width: 1299px) and (max-width: 1400px) {
+
+    /* Globle */
+    .title .image {
+        width: 295px;
+        height: 170px;
+    }
+
+    .title .image h2 {
+        letter-spacing: 6px;
+    }
+
+    /* Header */
+    /* Space Images */
+    header#Home .space-img img:nth-of-type(1) {
+        width: 100px;
+        top: 20%;
+        position: absolute;
+        left: 125px;
+    }
+
+    header#Home .space-img img:nth-of-type(2) {
+        width: 125px;
+        position: absolute;
+        top: 10%;
+        right: 100px;
+    }
+
+    header#Home .space-img img:nth-of-type(3) {
+        width: 100px;
+        position: absolute;
+        bottom: 7%;
+        left: 75px;
+    }
+
+    header#Home .space-img img:nth-of-type(4) {
+        width: 100px;
+        position: absolute;
+        bottom: 15%;
+        right: 100px;
+    }
+
+    /* Container */
+    header#Home .container span.M0FN {
+        padding: 7px 40px;
+        margin-bottom: 20px;
+    }
+
+    header#Home .container span.M0FN img {
+        width: 30px;
+    }
+
+    header#Home .container span.M0FN p {
+        letter-spacing: 2px;
+        font-size: 16px;
+    }
+
+    header#Home .container h2 {
+        font-size: 80px;
+        width: 100%;
+    }
+
+    /* About */
+
+    #About .container .section:nth-of-type(2) .text {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h5 {
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h5::after {
+        width: 30%;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(1) h3 {
+        font-size: 50px;
+    }
+
+    #About .container .section:nth-of-type(2) .text:nth-of-type(2) p {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+
+}
