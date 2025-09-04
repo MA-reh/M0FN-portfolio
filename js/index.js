@@ -9,8 +9,10 @@ let buttonsNav = document.querySelectorAll(".nav-ancor"),
   allSectionsInPage = document.querySelectorAll(".click-key"),
   heightOfNavBar = document.querySelector("nav").clientHeight,
   dropMenuLinks = dropMenuPortfolio.querySelectorAll("ul li"),
+  allTitles = document.querySelectorAll(".title .image h2"),
   loadingPageEle = document.querySelector("#loadingPage");
 
+  // when Window open 
   window.addEventListener("DOMContentLoaded" , (e) => {
     
     loadingPageEle.classList.add("hide")
@@ -20,8 +22,6 @@ let buttonsNav = document.querySelectorAll(".nav-ancor"),
       
     },1000)
   })
-  
-  
 
 for (let navBtn of buttonsNav) {
   navBtn.addEventListener("click", function (e) {
@@ -65,6 +65,8 @@ window.addEventListener("scroll", function () {
       sectionId = section.id,
       topOfSection = section.offsetTop - heightOfNavBar,
       bottomOfSection = section.offsetTop + section.clientHeight;
+
+      sectionTitle.classList.remove("active");
 
     if (topOfWindow >= topOfSection && topOfWindow <= bottomOfSection) {
       let newSection = document.querySelector(
