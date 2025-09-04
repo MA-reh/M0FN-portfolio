@@ -1,3 +1,41 @@
+/* Loading page */
+
+#loadingPage {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;left: 0;
+    background-color: #000;
+    z-index: 100000000000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition-duration: 1.0s;
+}
+
+#loadingPage.hide {
+    opacity: 0;
+}
+
+.loader {
+    width: 150px;
+    height: 14px;
+    --c: var(--main-color) 92%,#0000;
+    background: 
+      radial-gradient(circle 7px at bottom,var(--c)) 0 0,
+      radial-gradient(circle 7px at top   ,var(--c)) 0 100%;
+    background-size: calc(100%/4) 50%;
+    background-repeat: repeat-x;
+    animation: l11 1s infinite;
+  }
+  @keyframes l11 {
+      80%,100% {background-position: calc(100%/3) 0,calc(100%/-3) 100%}
+  }
+
+
+
+
 /* Button top */
 .button-up {
     width: fit-content;
@@ -84,17 +122,53 @@ nav.navbar .container .navbar-collapse>ul li .nav-ancor {
     height: 100%;
     display: block;
     overflow: hidden;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     text-align: center;
     margin: 0 auto;
 
 }
 
+nav.navbar .container .navbar-collapse>ul li .nav-ancor::before,
+nav.navbar .container .navbar-collapse>ul li .nav-ancor::after {
+    content: "";
+    width: 25%;
+    height: 25%;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transition-duration: 0.3s;
+}
+
+nav.navbar .container .navbar-collapse>ul li .nav-ancor::before {
+    border-top: 3px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
+    top: 0;
+    left: -25%;
+}
+
+nav.navbar .container .navbar-collapse>ul li .nav-ancor:hover::before,
+nav.navbar .container .navbar-collapse>ul li .nav-ancor.active::before {
+    left: 0;
+}
+
+nav.navbar .container .navbar-collapse>ul li .nav-ancor::after {
+    border-bottom: 3px solid var(--main-color);
+    border-right: 3px solid var(--main-color);
+    bottom: 0;
+    right: -25%;
+}
+
+nav.navbar .container .navbar-collapse>ul li .nav-ancor:hover::after,
+nav.navbar .container .navbar-collapse>ul li .nav-ancor.active::after {
+    right: 0;
+}
+
+
 nav.navbar .container .navbar-collapse>ul li .nav-ancor span {
     position: relative;
     z-index: 10;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     padding-top: 4px;
     display: flex;
     justify-content: center;
@@ -105,7 +179,8 @@ nav.navbar .container .navbar-collapse>ul li .nav-ancor span p {
     margin: 0;
 }
 
-nav.navbar .container .navbar-collapse>ul li .nav-ancor span.active {
+nav.navbar .container .navbar-collapse>ul li .nav-ancor:hover span,
+nav.navbar .container .navbar-collapse>ul li .nav-ancor.active span {
     color: var(--main-color);
 }
 
@@ -120,12 +195,14 @@ nav.navbar .container .navbar-collapse>ul li .drop-div {
     transition-duration: 0.5s;
     visibility: hidden;
     opacity: 0;
+    z-index: -1;
 }
 
 nav.navbar .container .navbar-collapse>ul li .drop-div.show {
     margin-top: 10px;
     visibility: visible;
     opacity: 1;
+    z-index: 5;
 }
 
 nav.navbar .container .navbar-collapse>ul li .drop-div ul.dropDown {
@@ -274,8 +351,8 @@ header#Home {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     position: relative;
+    /* padding: 50px 0 0 0; */
 }
 
 /* Space Images */
@@ -436,7 +513,7 @@ header#Home .container .buttons .social-buttons ul .social-li .social-icon i {
     color: #fff;
 }
 
-/* Main section */
+/* Main section in header */
 main {
     background-color: #171914;
 }
@@ -533,6 +610,43 @@ main .container>.row .spacial-card .item:hover .head .frame img {
 main .container>.row .spacial-card .item .body p {
     font-size: 18px;
 }
+
+/* Scroll Bar in header */
+
+marquee {
+    background-color: rgb(33, 33, 33);
+    display: flex;
+}
+
+marquee ul {
+    display: flex;
+    margin: 0;
+}
+
+marquee ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+marquee ul .icon {
+    background-color: var(--border-btn);
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+marquee ul i {
+    color: #fff;
+    font-size: 16px;
+}
+
+
+
+
 
 /* About */
 

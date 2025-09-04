@@ -16,6 +16,12 @@
     <link rel="shortcut icon" href="images/logo-M0FN.svg" type="image/x-icon" />
   </head>
   <body>
+    <div id="loadingPage">
+      <div class="loader"></div>
+    </div>
+    
+
+    
     <div class="button-up">
       <a href="#Home">
         <i class="fa-solid fa-caret-up"></i>
@@ -31,7 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item me-xl-2 active-nav">
-              <a href="#Home" class="nav-ancor font-2">
+              <a href="#Home" class="nav-ancor font-2 active">
                 <span><p>Home</p></span>
               </a>
             </li>
@@ -126,15 +132,15 @@
       </div>
     </nav>
 
-    <header id="Home" class="">
-      <div class="container">
+    <header id="Home" class="click-key pt-5">
+      <div class="container py-5">
         <div class="space-img">
           <img src="images/Csharp.svg" alt="Csharp" />
           <img src="images/html.svg" alt="html" />
           <img src="images/Python.svg" alt="Python" />
           <img src="images/react.svg" alt="react" />
         </div>
-        <div class="content mt-5">
+        <div class="content my-5 mb-lg-0">
           <img
             src="images/logo-M0FN.svg"
             alt="logo-M0FN"
@@ -148,7 +154,7 @@
             />
             <p class="d-inline-block font-5 m-0">Hi, I’m M0FN</p>
           </span>
-          <h2 class="font-1">
+          <h2 class="font-1 my-4">
             Code the Future with <br />
             Innovative
             <span class="main-color">Development</span>
@@ -188,78 +194,152 @@
           </div>
         </div>
       </div>
-    </header>
 
-    <main class="py-5" id="">
-      <div class="container">
-        <h5 class="mb-2 text-center main-color font-2">Core Features</h5>
-        <h2 class="mb-5 py-3 text-center">Standout Features</h2>
-        <div class="row">
-          <div class="spacial-card col-lg-4 col-md-6">
-            <div class="item">
-              <div class="head">
-                <div class="frame">
-                  <img
-                    src="images/icons/main-icon1.svg"
-                    alt="main-icon1"
-                    class="img-fluid"
-                  />
+      <main id="Main" class="pb-5 pt-5 click-key">
+        <div class="container">
+          <h5 class="mb-2 text-center main-color font-2">Core Features</h5>
+          <h2 class="mb-5 py-3 text-center">Standout Features</h2>
+          <div class="row">
+            <div class="spacial-card col-lg-4 col-md-6">
+              <div class="item">
+                <div class="head">
+                  <div class="frame">
+                    <img
+                      src="images/icons/main-icon1.svg"
+                      alt="main-icon1"
+                      class="img-fluid"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div class="body">
-                <h4 class="my-4">Fast Performance</h4>
-                <p class="">
-                  Enjoy lightning-fast load times and a seamless user experience
-                  with our optimized platform.
-                </p>
+                <div class="body">
+                  <h4 class="my-4">Fast Performance</h4>
+                  <p class="">
+                    Enjoy lightning-fast load times and a seamless user
+                    experience with our optimized platform.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="spacial-card col-lg-4 col-md-6">
-            <div class="item">
-              <div class="head">
-                <div class="frame">
-                  <img
-                    src="images/icons/main-icon2.svg"
-                    alt="main-icon2"
-                    class="img-fluid"
-                  />
+            <div class="spacial-card col-lg-4 col-md-6">
+              <div class="item">
+                <div class="head">
+                  <div class="frame">
+                    <img
+                      src="images/icons/main-icon2.svg"
+                      alt="main-icon2"
+                      class="img-fluid"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div class="body">
-                <h4 class="my-4">Fresh & Clean Design</h4>
-                <p class="">
-                  Experience a modern, clutter-free design that’s as refreshing
-                  as it is functional. Our approach with intuitive navigation.
-                </p>
+                <div class="body">
+                  <h4 class="my-4">Fresh & Clean Design</h4>
+                  <p class="">
+                    Experience a modern, clutter-free design that’s as
+                    refreshing as it is functional. Our approach with intuitive
+                    navigation.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="spacial-card col-lg-4 col-md-6 mx-auto">
-            <div class="item">
-              <div class="head">
-                <div class="frame">
-                  <img
-                    src="images/icons/main-icon3.svg"
-                    alt="main-icon3"
-                    class="img-fluid"
-                  />
+            <div class="spacial-card col-lg-4 col-md-6 mx-auto">
+              <div class="item">
+                <div class="head">
+                  <div class="frame">
+                    <img
+                      src="images/icons/main-icon3.svg"
+                      alt="main-icon3"
+                      class="img-fluid"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div class="body">
-                <h4 class="my-4">Fast & Friendly Support</h4>
-                <p class="">
-                  Get the help you need. Our support team is dedicated to
-                  providing quick and friendly assistance.
-                </p>
+                <div class="body">
+                  <h4 class="my-4">Fast & Friendly Support</h4>
+                  <p class="">
+                    Get the help you need. Our support team is dedicated to
+                    providing quick and friendly assistance.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <section id="About" class="py-5">
+      <marquee behavior="scroll" loop="infinite"  scrollamount="13" direction="left" class="py-4">
+        <ul class="moveScroll-feature-list d-flex" type="none">
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Bootstrap 5x</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Responsive &amp; Mobile Friendly</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">HTML5 &amp; CSS3</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">30+ Custom Elements</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">It’s Super Fast</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">One Page &amp; Multi-Page Template</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">High Quality Support</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Fully Customizable</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Easy Lifetime Update</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Google Fonts</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Root Color Use</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Mobile-first design</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Big Template For Personal Portfolio</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Cross-browser compatible</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Average 5-Star Reviews</div>
+          </li>
+          <li class="moveScroll-feature me-4 d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Sass Available</div>
+          </li>
+          <li class="moveScroll-feature d-flex">
+            <div class="icon me-2"><i class="fa-solid fa-check"></i></div>
+            <div class="text">Modern Design</div>
+          </li>
+        </ul>
+      </marquee>
+    </header>
+
+    <section id="About" class="py-5 click-key">
       <div class="container">
         <div class="title text-center mb-5">
           <div class="image">
@@ -311,7 +391,7 @@
       </div>
     </section>
 
-    <section id="Experience" class="py-5">
+    <section id="Experience" class="py-5 click-key">
       <div class="container">
         <div class="title text-center mb-5">
           <div class="image">
@@ -431,7 +511,7 @@
       </div>
     </section>
 
-    <section id="Awards" class="py-5">
+    <section id="Awards" class="py-5 click-key">
       <div class="container">
         <div class="title text-center mb-5">
           <div class="image">
@@ -556,7 +636,7 @@
       </div>
     </section>
 
-    <section id="Service" class="py-5">
+    <section id="Service" class="py-5 click-key">
       <div class="container">
         <div class="title text-center mb-5">
           <div class="image">
@@ -730,7 +810,7 @@
       </div>
     </section>
 
-    <section id="Portfolio" class="py-5">
+    <section id="Portfolio" class="py-5 click-key">
       <div class="container">
         <div class="title text-center mb-5">
           <div class="image">
@@ -943,7 +1023,7 @@
       </div>
     </section>
 
-    <section id="Contact" class="py-5">
+    <section id="Contact" class="py-5 click-key">
       <div class="container">
         <div class="content">
           <div class="title text-center mb-5">

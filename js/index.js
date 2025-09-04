@@ -6,10 +6,79 @@ let buttonsNav = document.querySelectorAll(".nav-ancor"),
   allIconsSocial = BoxIconsSocials.querySelectorAll("span.social-bg"),
   buttonTop = document.querySelector(".button-up a"),
   buttonTestDistance = document.querySelector("#test"),
-  allSectionsInPage = document.querySelectorAll(".click-key");
+  allSectionsInPage = document.querySelectorAll(".click-key"),
+  heightOfNavBar = document.querySelector("nav").clientHeight,
+  dropMenuLinks = dropMenuPortfolio.querySelectorAll("ul li"),
+  loadingPageEle = document.querySelector("#loadingPage");
+
+  window.addEventListener("DOMContentLoaded" , (e) => {
+    
+    loadingPageEle.classList.add("hide")
+    
+    setTimeout((e) => {
+      loadingPageEle.classList.add("d-none")
+      
+    },1000)
+  })
+  
+  
+
+for (let navBtn of buttonsNav) {
+  navBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let currentNavBtn = document.querySelector(
+        "nav .navbar-collapse .nav-ancor.active"
+      ),
+      idOfCurrentSection = navBtn.getAttribute("href"),
+      currentSection = document.querySelector(`${idOfCurrentSection}`),
+      currentSectionTop = currentSection.offsetTop - heightOfNavBar;
+
+    // Move page to Start Section
+    window.scrollTo({
+      top: currentSectionTop,
+      left: 0,
+    });
+
+    currentNavBtn.classList.remove("active");
+    navBtn.classList.add("active");
+  });
+}
 
 // when user scroll in WebSite
-window.addEventListener("scroll", (e) => {
+window.addEventListener("scroll", function () {
+  let topOfWindow = window.scrollY;
+
+  let sectionNames = [
+    "Home",
+    "About",
+    "Experience",
+    "Awards",
+    "Service",
+    "Portfolio",
+    "Contact",
+  ];
+
+  for (let sectionName of sectionNames) {
+    let section = document.querySelector(`#${sectionName}`),
+      sectionTitle = section.querySelector("h2"),
+      sectionId = section.id,
+      topOfSection = section.offsetTop - heightOfNavBar,
+      bottomOfSection = section.offsetTop + section.clientHeight;
+
+    if (topOfWindow >= topOfSection && topOfWindow <= bottomOfSection) {
+      let newSection = document.querySelector(
+          `nav .nav-ancor[href="#${sectionId}"]`
+        ),
+        oldSection = document.querySelector(`nav .nav-ancor.active`);
+
+      sectionTitle.classList.add("active");
+
+      oldSection.classList.remove("active");
+      newSection.classList.add("active");
+    }
+  }
+
   // check if user scroll at 250 or up show btn travel up
   setInterval(
     document.querySelector("html").scrollTop >= 250
@@ -17,58 +86,7 @@ window.addEventListener("scroll", (e) => {
       : buttonTop.classList.remove("active"),
     1
   );
-
-  // if user scroll at (number in if condition) start animation
-  setInterval((e) => {
-    let arrTitles = document.querySelectorAll(".title h2");
-    if (document.querySelector("html").scrollTop >= 810) {
-      arrTitles[0].classList.add("active");
-    } else {
-      arrTitles[0].classList.remove("active");
-    }
-
-    if (document.querySelector("html").scrollTop >= 1900) {
-      arrTitles[1].classList.add("active");
-    } else {
-      arrTitles[1].classList.remove("active");
-    }
-
-    if (document.querySelector("html").scrollTop >= 2650) {
-      arrTitles[2].classList.add("active");
-    } else {
-      arrTitles[2].classList.remove("active");
-    }
-
-    if (document.querySelector("html").scrollTop >= 3400) {
-      arrTitles[3].classList.add("active");
-    } else {
-      arrTitles[3].classList.remove("active");
-    }
-
-    if (document.querySelector("html").scrollTop >= 4580) {
-      arrTitles[4].classList.add("active");
-    } else {
-      arrTitles[4].classList.remove("active");
-    }
-
-    if (document.querySelector("html").scrollTop >= 5730) {
-      arrTitles[5].classList.add("active");
-    } else {
-      arrTitles[5].classList.remove("active");
-    }
-  }, 1000);
 });
-
-// btn nav bar if user hover add class active if user leave hover remove class
-for (let btn of buttonsNav) {
-  btn.addEventListener("mouseenter", () => {
-    btn.querySelector("span").classList.add("active");
-  });
-
-  btn.addEventListener("mouseleave", () => {
-    btn.querySelector("span").classList.remove("active");
-  });
-}
 
 // if hover on PortfolioBtn show drop menu
 function navBtnPortfolioHover() {
@@ -80,6 +98,95 @@ function navBtnPortfolioHover() {
 function navBtnPortfolioLeave() {
   buttonsNav[5].querySelector("span").classList.remove("active");
   dropMenuPortfolio.classList.remove("show");
+}
+
+for (let dropLink of dropMenuLinks) {
+  dropLink.addEventListener("mouseenter", (e) => {
+    for (let btnNav of buttonsNav) {
+      btnNav.classList.remove("active");
+    }
+
+    let topOfWindow = window.scrollY;
+
+    let sectionNames = [
+      "Home",
+      "About",
+      "Experience",
+      "Awards",
+      "Service",
+      "Portfolio",
+      "Contact",
+    ];
+
+    for (let sectionName of sectionNames) {
+      let section = document.querySelector(`#${sectionName}`),
+        sectionId = section.id,
+        topOfSection = section.offsetTop - heightOfNavBar,
+        bottomOfSection = section.offsetTop + section.clientHeight;
+
+      if (topOfWindow >= topOfSection && topOfWindow <= bottomOfSection) {
+        let newSection = document.querySelector(
+          `nav .nav-ancor[href="#${sectionId}"]`
+        );
+
+        newSection.classList.add("active");
+      }
+    }
+
+    buttonsNav[5].classList.add("active");
+  });
+  dropLink.parentElement.addEventListener("mouseleave", (e) => {
+    for (let btnNav of buttonsNav) {
+      btnNav.classList.remove("active");
+    }
+
+    let topOfWindow = window.scrollY;
+
+    let sectionNames = [
+      "Home",
+      "About",
+      "Experience",
+      "Awards",
+      "Service",
+      "Portfolio",
+      "Contact",
+    ];
+
+    for (let sectionName of sectionNames) {
+      let section = document.querySelector(`#${sectionName}`),
+        sectionId = section.id,
+        topOfSection = section.offsetTop - heightOfNavBar,
+        bottomOfSection = section.offsetTop + section.clientHeight;
+
+      if (topOfWindow >= topOfSection && topOfWindow <= bottomOfSection) {
+        let newSection = document.querySelector(
+          `nav .nav-ancor[href="#${sectionId}"]`
+        );
+
+        newSection.classList.add("active");
+      }
+    }
+  });
+
+  dropLink.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let currentNavBtn = document.querySelector(
+        "nav .navbar-collapse .nav-ancor.active"
+      ),
+      idOfCurrentSection = buttonsNav[5].getAttribute("href"),
+      currentSection = document.querySelector(`${idOfCurrentSection}`),
+      currentSectionTop = currentSection.offsetTop - heightOfNavBar - 80;
+
+    let idOfCurrentProject = dropLink.firstElementChild.getAttribute("href"),
+      currentProject = document.querySelector(` ${idOfCurrentProject}`),
+      currentProjectTop = currentProject.offsetTop + currentSectionTop;
+
+    window.scrollTo({
+      top: currentProjectTop,
+      left: 0,
+    });
+  });
 }
 
 buttonsNav[5].addEventListener("mouseenter", navBtnPortfolioHover);
