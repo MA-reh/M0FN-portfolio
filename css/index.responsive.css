@@ -24,34 +24,34 @@
     /* Nav */
 
     nav.navbar {
-        height: 12vh;
+        height: 13vh;
+        transition-duration: 1s;
     }
 
     nav.navbar .container .navbar-collapse>ul li .nav-ancor {
         width: fit-content;
     }
-    
-    
 
     nav.navbar .container a.navbar-brand img {
         width: 50px;
+        transition-duration: 1s;
     }
 
     nav.navbar .container .navbar-collapse {
-        position: relative;
-        margin-top: 30px;
+        position: absolute;
+        left: 50%;
+        margin-top: 8vh;
+        transform: translate(-50%, 0%);
         background-color: #000;
-        height: 0px;
+        width: 95%;
         overflow: hidden;
         padding: 10px;
         border-radius: 10px;
         border: 2px solid var(--main-color);
-        left: 0%;
-        transform: initial;
+        transition-duration: 1s;
     }
 
     nav.navbar .container .navbar-collapse.show {
-        height: 100%;
         max-width: 700px;
     }
 
@@ -78,7 +78,7 @@
         flex-direction: column;
         border: 2px solid var(--main-color);
         right: 15px;
-        top: 15px;
+        top: 10px;
         position: absolute;
     }
 
@@ -936,6 +936,11 @@
         transform: translate(-50%, -50%);
     }
 
+
+
+
+
+
     nav.navbar .container .navbar-collapse ul {
         margin-bottom: 0;
         background-color: #000;
@@ -1202,6 +1207,11 @@
         letter-spacing: 5px;
     }
 
+    /* Nav */
+    .main-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 
     /* Drop Menu */
 
@@ -1309,6 +1319,13 @@
     .title .image h2 {
         letter-spacing: 6px;
     }
+
+    /* Nav */
+    .main-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
 
     /* Header */
     /* Space Images */

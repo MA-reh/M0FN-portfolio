@@ -5,27 +5,27 @@ let buttonsNav = document.querySelectorAll(".nav-ancor"),
   BoxIconsSocials = plusIcon.nextElementSibling,
   allIconsSocial = BoxIconsSocials.querySelectorAll("span.social-bg"),
   buttonTop = document.querySelector(".button-up a"),
-  buttonTestDistance = document.querySelector("#test"),
   allSectionsInPage = document.querySelectorAll(".click-key"),
   heightOfNavBar = document.querySelector("nav").clientHeight,
   dropMenuLinks = dropMenuPortfolio.querySelectorAll("ul li"),
   allTitles = document.querySelectorAll(".title .image h2"),
-  loadingPageEle = document.querySelector("#loadingPage");
+  loadingPageEle = document.querySelector("#loadingPage"),
+  allBtnServices = document.querySelectorAll(".btn-service");
 
-  // when Window open 
-  window.addEventListener("DOMContentLoaded" , (e) => {
-    
-    loadingPageEle.classList.add("hide")
-    
-    setTimeout((e) => {
-      loadingPageEle.classList.add("d-none")
-      
-    },1000)
-  })
+// when Window open
+window.addEventListener("DOMContentLoaded", (e) => {
+  loadingPageEle.classList.add("hide");
+
+  setTimeout((e) => {
+    loadingPageEle.classList.add("d-none");
+  }, 1000);
+});
 
 for (let navBtn of buttonsNav) {
   navBtn.addEventListener("click", function (e) {
     e.preventDefault();
+
+    navBtn.parentElement.parentElement.parentElement.classList.remove("show");
 
     let currentNavBtn = document.querySelector(
         "nav .navbar-collapse .nav-ancor.active"
@@ -35,13 +35,49 @@ for (let navBtn of buttonsNav) {
       currentSectionTop = currentSection.offsetTop - heightOfNavBar;
 
     // Move page to Start Section
-    window.scrollTo({
-      top: currentSectionTop,
-      left: 0,
-    });
+    setTimeout(() => {
+      window.scrollTo({
+        top: currentSectionTop,
+        left: 0,
+      });
+    }, 100);
 
     currentNavBtn.classList.remove("active");
     navBtn.classList.add("active");
+  });
+}
+
+// Download CV Btn
+function closeCvPopup() {
+  popupCV.classList.remove("active");
+}
+
+function openCvPopup() {
+  popupCV.classList.add("active");
+}
+
+popupCV.firstElementChild.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+CVBtn1.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  popupCV.classList.add("active");
+});
+
+CVBtn2.addEventListener("click", (e) => {
+  e.preventDefault();
+  popupCV.classList.add("active");
+});
+
+// Buttons Service
+for (let btnService of allBtnServices) {
+  btnService.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    openCvPopup();
+    
   });
 }
 
@@ -66,7 +102,7 @@ window.addEventListener("scroll", function () {
       topOfSection = section.offsetTop - heightOfNavBar,
       bottomOfSection = section.offsetTop + section.clientHeight;
 
-      sectionTitle.classList.remove("active");
+    sectionTitle.classList.remove("active");
 
     if (topOfWindow >= topOfSection && topOfWindow <= bottomOfSection) {
       let newSection = document.querySelector(
@@ -210,4 +246,18 @@ plusIcon.addEventListener("click", () => {
   for (let btn of allIconsSocial) {
     btn.classList.add("active");
   }
+});
+
+iconSnapchat.addEventListener("mouseenter", (e) => {
+  iconSnapchat.firstElementChild.firstElementChild.setAttribute(
+    "fill",
+    "#FFFC00"
+  );
+});
+
+iconSnapchat.addEventListener("mouseleave", (e) => {
+  iconSnapchat.firstElementChild.firstElementChild.setAttribute(
+    "fill",
+    "#bff747"
+  );
 });
