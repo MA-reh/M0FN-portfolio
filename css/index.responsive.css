@@ -27,6 +27,12 @@
         height: 12vh;
     }
 
+    nav.navbar .container .navbar-collapse>ul li .nav-ancor {
+        width: fit-content;
+    }
+    
+    
+
     nav.navbar .container a.navbar-brand img {
         width: 50px;
     }
