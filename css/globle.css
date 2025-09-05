@@ -173,3 +173,7 @@ section:nth-of-type(even) {
     line-height: 50px;
     margin: 0;
 }
+#popupCV img {
+    width: 250px;
+    
+}
