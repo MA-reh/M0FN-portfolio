@@ -10,6 +10,33 @@ html {
 body {
     font-family: "Roboto", sans-serif;
     color: #fff;
+    overflow-x: hidden;
+}
+
+*::selection{
+    color: #000;
+    background-color: var(--main-color);
+}
+
+#MouseBall{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: var(--main-color);
+    z-index: 1000000;
+    transition-duration: 0.5s;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+#MouseBall.active{
+    width: 50px;
+    height: 50px;
+    opacity: 0.3;
 }
 
 /* Scroll حجم الشريط بتاع ال */
@@ -139,6 +166,11 @@ section:nth-of-type(even) {
 
 .title .image h2.active {
     transform: translate(-50%, -25%) scale(1.0);
+}
+
+/* Buttons service */
+.btn-service{
+    cursor: pointer;
 }
 
 /* All Models */

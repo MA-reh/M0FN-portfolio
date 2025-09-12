@@ -10,7 +10,8 @@ let buttonsNav = document.querySelectorAll(".nav-ancor"),
   dropMenuLinks = dropMenuPortfolio.querySelectorAll("li"),
   allTitles = document.querySelectorAll(".title .image h2"),
   loadingPageEle = document.querySelector("#loadingPage"),
-  allBtnServices = document.querySelectorAll(".btn-service");
+  allBtnServices = document.querySelectorAll(".btn-service"),
+  allElementCanHoverIt = document.querySelectorAll(".hoverItem");
 
 for (let navBtn of buttonsNav) {
   navBtn.addEventListener("click", function (e) {
@@ -38,15 +39,6 @@ for (let navBtn of buttonsNav) {
   });
 }
 
-// Buttons Service
-for (let btnService of allBtnServices) {
-  btnService.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    openCvPopup();
-  });
-}
-
 // NavBar Links
 for (let dropLink of dropMenuLinks) {
   dropLink.addEventListener("mouseenter", hoverOnLinkNavbar);
@@ -59,6 +51,35 @@ for (let dropLink of dropMenuLinks) {
     clickOnLinkNavbar(dropLink);
   });
 }
+
+// if user hover on element has class hoverItem fire function
+for (let hoverEle of allElementCanHoverIt) {
+  hoverEle.addEventListener("mouseenter", function (e) {
+    MouseBall.classList.add("active")
+  });
+  
+  hoverEle.addEventListener("mouseleave", function (e) {
+    MouseBall.classList.remove("active")
+  });
+}
+
+document.addEventListener("mousemove", function (e) {
+  let positionY = e.clientY,
+    positionX = e.clientX;
+
+  MouseBall.animate(
+    [
+      {
+        top: `${positionY}px`,
+        left: `${positionX}px`,
+      },
+    ],
+    {
+      duration: 1000,
+      fill: "forwards"
+    }
+  );
+});
 
 // when Window open
 window.addEventListener("DOMContentLoaded", loadedWindow);
@@ -81,10 +102,8 @@ CVBtn2.addEventListener("click", (e) => {
   popupCV.classList.add("active");
 });
 
-
 // when user scroll in WebSite
 window.addEventListener("scroll", scrollUserInToPage);
-
 
 buttonsNav[5].addEventListener("mouseenter", navBtnPortfolioHover);
 buttonsNav[5].addEventListener("mouseleave", navBtnPortfolioLeave);

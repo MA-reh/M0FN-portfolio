@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     background-color: #000;
-    z-index: 100000000000000;
+    z-index: 100000000000000000000000000000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -807,6 +807,12 @@ marquee ul i {
 }
 
 /* Experience */
+#Experience .container>.row .experience-row h6 {
+    width: fit-content;
+    margin: auto;
+    cursor: context-menu;
+}
+
 #Experience .container>.row .experience-row+.hr {
     width: calc(100% - 24px);
     height: 2px;
