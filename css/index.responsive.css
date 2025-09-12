@@ -45,7 +45,6 @@
         background-color: #000;
         width: 95%;
         overflow: hidden;
-        padding: 10px;
         border-radius: 10px;
         border: 2px solid var(--main-color);
         transition-duration: 1s;
@@ -56,8 +55,8 @@
     }
 
     nav.navbar .container .navbar-collapse ul {
+        padding-block: 10px;
         gap: 10px;
-        padding: 0px 0px;
         margin-bottom: 10px;
     }
 
@@ -354,13 +353,20 @@
 
     /* Contact */
 
-    #Contact .container {
-        background-image: none;
+    #Contact .container .item .box-socials>.loading-frame {
+        top: 90%;
+        left: 65%;
+        transform: rotate(-135deg);
     }
 
-    #Contact .container .content {
-        background-image: none;
-    }
+
+
+
+
+
+
+
+
 
 }
 
@@ -860,18 +866,6 @@
 
     /* Contact Us */
 
-    #Contact .container {
-        background-image: url("../images/ManContact.svg");
-        background-position: 90% 270px;
-        background-size: 20%;
-    }
-
-    #Contact .container .content {
-        background-image: url("../images/ManContact2.svg");
-        background-position: 10% 270px;
-        background-size: 20%;
-    }
-
     #Contact .container .item {
         width: 350px;
         height: 350px;
@@ -883,6 +877,11 @@
         height: 55px;
     }
 
+    #Contact .container .item .box-socials>.loading-frame {
+        top: 60%;
+        left: 110%;
+        transform: rotate(180deg);
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1300px) {
@@ -1170,29 +1169,6 @@
 
     /* Contact Us */
 
-    #Contact .container {
-        background-image: url("../images/ManContact.svg");
-        background-position: 85% 300px;
-        background-size: 20%;
-    }
-
-    #Contact .container .content {
-        background-image: url("../images/ManContact2.svg");
-        background-position: 10% 300px;
-        background-size: 20%;
-    }
-
-    #Contact .container {
-        background-image: url("../images/ManContact.svg");
-        background-position: 85% 200px;
-        background-size: 20%;
-    }
-
-    #Contact .container .content {
-        background-image: url("../images/ManContact2.svg");
-        background-position: 15% 200px;
-        background-size: 20%;
-    }
 }
 
 @media (min-width: 1200px) and (max-width: 1300px) {
