@@ -164,7 +164,7 @@ function toggleSocialIcons() {
     }
     setTimeout((e) => {
       arrowContactDraw.classList.remove("hide");
-    }, 4000);
+    }, 4300);
 
     return;
   }
