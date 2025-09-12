@@ -140,15 +140,12 @@ function outHoverOnLinkNavbar() {
     }
   }
 }
-function clickOnLinkNavbar() {
-  let currentNavBtn = document.querySelector(
-      "nav .navbar-collapse .nav-ancor.active"
-    ),
-    idOfCurrentSection = buttonsNav[5].getAttribute("href"),
+function clickOnLinkNavbar(nameSection) {
+  let idOfCurrentSection = buttonsNav[5].getAttribute("href"),
     currentSection = document.querySelector(`${idOfCurrentSection}`),
     currentSectionTop = currentSection.offsetTop - heightOfNavBar - 80;
 
-  let idOfCurrentProject = dropLink.firstElementChild.getAttribute("href"),
+  let idOfCurrentProject = nameSection.firstElementChild.getAttribute("href"),
     currentProject = document.querySelector(` ${idOfCurrentProject}`),
     currentProjectTop = currentProject.offsetTop + currentSectionTop;
 
@@ -159,7 +156,6 @@ function clickOnLinkNavbar() {
 }
 
 // btn contact Us if user click btn his show Every Social Btns
-
 function toggleSocialIcons() {
   if (plusIcon.classList.contains("show")) {
     plusIcon.classList.remove("show");
@@ -167,10 +163,8 @@ function toggleSocialIcons() {
       btn.classList.remove("active");
     }
     setTimeout((e) => {
-      if (!(allIconsSocial[0].classList.contains("active"))) {
-        arrowContactDraw.classList.remove("hide");
-      }
-    }, 5000);
+      arrowContactDraw.classList.remove("hide");
+    }, 4000);
 
     return;
   }
@@ -182,7 +176,6 @@ function toggleSocialIcons() {
 }
 
 // change color icon SnapShat
-
 function toggleColorIconSnapShat(color) {
   iconSnapchat.firstElementChild.firstElementChild.setAttribute("fill", color);
 }

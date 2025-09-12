@@ -7,7 +7,7 @@ let buttonsNav = document.querySelectorAll(".nav-ancor"),
   buttonTop = document.querySelector(".button-up a"),
   allSectionsInPage = document.querySelectorAll(".click-key"),
   heightOfNavBar = document.querySelector("nav").clientHeight,
-  dropMenuLinks = dropMenuPortfolio.querySelectorAll("ul li"),
+  dropMenuLinks = dropMenuPortfolio.querySelectorAll("li"),
   allTitles = document.querySelectorAll(".title .image h2"),
   loadingPageEle = document.querySelector("#loadingPage"),
   allBtnServices = document.querySelectorAll(".btn-service");
@@ -23,7 +23,7 @@ for (let navBtn of buttonsNav) {
       ),
       idOfCurrentSection = navBtn.getAttribute("href"),
       currentSection = document.querySelector(`${idOfCurrentSection}`),
-      currentSectionTop = currentSection.offsetTop - heightOfNavBar;
+      currentSectionTop = currentSection.offsetTop - heightOfNavBar + 5;
 
     // Move page to Start Section
     setTimeout(() => {
@@ -56,7 +56,7 @@ for (let dropLink of dropMenuLinks) {
   dropLink.addEventListener("click", (e) => {
     e.preventDefault();
 
-    clickOnLinkNavbar();
+    clickOnLinkNavbar(dropLink);
   });
 }
 
