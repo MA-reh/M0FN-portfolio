@@ -11,6 +11,11 @@
         font-size: 24px;
     }
 
+
+    #MouseBall {
+        display: none;
+    }
+
     /* Button Top */
     .button-up a {
         width: 40px;
@@ -700,6 +705,11 @@
     .title .image h2 {
         font-size: 30px;
         letter-spacing: 5px;
+    }
+
+
+    #MouseBall {
+        display: block;
     }
 
     /* Header */
