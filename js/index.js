@@ -20,8 +20,8 @@ for (let navBtn of buttonsNav) {
     navBtn.parentElement.parentElement.parentElement.classList.remove("show");
 
     let currentNavBtn = document.querySelector(
-        "nav .navbar-collapse .nav-ancor.active"
-      ),
+      "nav .navbar-collapse .nav-ancor.active"
+    ),
       idOfCurrentSection = navBtn.getAttribute("href"),
       currentSection = document.querySelector(`${idOfCurrentSection}`),
       currentSectionTop = currentSection.offsetTop - heightOfNavBar + 5;
@@ -57,28 +57,19 @@ for (let hoverEle of allElementCanHoverIt) {
   hoverEle.addEventListener("mouseenter", function (e) {
     MouseBall.classList.add("active")
   });
-  
+
   hoverEle.addEventListener("mouseleave", function (e) {
     MouseBall.classList.remove("active")
   });
 }
 
 document.addEventListener("mousemove", function (e) {
-  let positionY = e.clientY,
-    positionX = e.clientX;
+  ballMove(e.clientX, e.clientY)
+});
 
-  MouseBall.animate(
-    [
-      {
-        top: `${positionY}px`,
-        left: `${positionX}px`,
-      },
-    ],
-    {
-      duration: 1000,
-      fill: "forwards"
-    }
-  );
+document.addEventListener("touchmove", function (e) {
+  e.preventDefault();
+  ballMove(e.touches[0].clientX, e.touches[0].clientY);
 });
 
 // when Window open

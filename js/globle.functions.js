@@ -7,6 +7,25 @@ function openCvPopup() {
   popupCV.classList.add("active");
 }
 
+function ballMove(distanceX, distanceY) {
+  let positionY = distanceY,
+    positionX = distanceX;
+
+  MouseBall.animate(
+    [
+      {
+        top: `${positionY}px`,
+        left: `${positionX}px`,
+      },
+    ],
+    {
+      duration: 1000,
+      fill: "forwards"
+    }
+  );
+
+}
+
 // if hover on PortfolioBtn show drop menu
 function navBtnPortfolioHover() {
   buttonsNav[5].querySelector("span").classList.add("active");
@@ -53,8 +72,8 @@ function scrollUserInToPage() {
 
     if (topOfWindow >= topOfSection && topOfWindow <= bottomOfSection) {
       let newSection = document.querySelector(
-          `nav .nav-ancor[href="#${sectionId}"]`
-        ),
+        `nav .nav-ancor[href="#${sectionId}"]`
+      ),
         oldSection = document.querySelector(`nav .nav-ancor.active`);
 
       sectionTitle.classList.add("active");
@@ -179,3 +198,4 @@ function toggleSocialIcons() {
 function toggleColorIconSnapShat(color) {
   iconSnapchat.firstElementChild.firstElementChild.setAttribute("fill", color);
 }
+
