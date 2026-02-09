@@ -80,19 +80,6 @@ popupCV.firstElementChild.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
-// open popup btn1
-CVBtn1.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  popupCV.classList.add("active");
-});
-
-// open popup btn2
-CVBtn2.addEventListener("click", (e) => {
-  e.preventDefault();
-  popupCV.classList.add("active");
-});
-
 // when user scroll in WebSite
 window.addEventListener("scroll", scrollUserInToPage);
 
@@ -112,3 +99,4 @@ iconSnapchat.addEventListener("mouseenter", () => {
 iconSnapchat.addEventListener("mouseleave", () => {
   toggleColorIconSnapShat("#bff747");
 });
+
